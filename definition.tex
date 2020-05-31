@@ -1,0 +1,50 @@
+\documentclass[a4paper,14pt]{article}
+
+\usepackage{cmap}                       % поиск в PDF
+\usepackage{mathtext}                   % русские буквы в фоhмулах
+\usepackage[T2A]{fontenc}               % кодировка
+\usepackage[utf8]{inputenc}             % кодировка исходного текста
+\usepackage[english,russian]{babel}     % локализация и переносы
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{icomma}
+
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\mathtoolsset{showonlyrefs=true}
+
+\usepackage{geometry}
+\geometry{top=15mm}
+\geometry{bottom=15mm}
+\geometry{left=15mm}
+\geometry{right=15mm}
+
+\everymath{\displaystyle}
+
+% Колонтитулы
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Определение}
+\lhead{2020}
+\begin{document}
+\section*{Определение}
+Представим бесконечную последовательность чисел $\left\{a_i\right\}_{i=0}^\infty$. Можно записать ее
+в качестве коэффициентов бесконечного полинома $f(t)$:
+\[
+	f(t) = \sum_{k=0}^{\infty} a_kt^k = a_0 + a_1t + a_2t^2 + \ldots
+\]
+$f(t)$ является производящей функцией. \\
+\textbf{NB}: $f(t)$ является формальным степенным рядом, поэтому не обязательно, что представленный
+ряд будет сходящимся. Нас интересуют коэффициенты, нежели чем переменные. \\
+Самый простой пример производящей функции – геометрическая прогрессия:
+\begin{align*}
+	&a_0 = 1, a_n = qa_{n-1} \\
+	1 + qt + &q^2t^2 + q^3t^3 + \ldots = \frac{1}{1 - qt}
+.\end{align*}
+Это верно, потому что:
+\[
+	(1 - qt)(1 + qt + q^2t^2 + \ldots) = 1 + qt - qt + q^2t^2 - q^2t^2 + \ldots = 1.
+\] 
+\end{document}
